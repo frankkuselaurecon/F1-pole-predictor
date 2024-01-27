@@ -1,4 +1,4 @@
-# F1-pole-predictor
+# F1🏎️pole🏎️predictor
 F1 Pole Predictor forecasts the 10th pole position in Formula 1 races. Analyze race data, make accurate predictions, and compete for the most precise forecasts.
 
 ## Aim of the game
@@ -8,5 +8,6 @@ F1 Pole Predictor forecasts the 10th pole position in Formula 1 races. Analyze r
 ## Project Directory
 To get started, read the files in the following order:
 1. Workflow - general overview
-2. Tech Stack - more detailed list of technologies required
+2. Tech Stack - a more detailed list of technologies required
 3. Resources - useful notes and links for the development of the app
+4. Tasks - to-do list
