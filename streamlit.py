@@ -59,7 +59,6 @@ def plot_cumulative_points():
 
 def main():
     st.title("F1 Pole Predictor")
-
     st.markdown("Welcome to the F1 Prediction Game! Predict the 10th place driver and earn points.")
 
     # Get user's guess
@@ -69,7 +68,7 @@ def main():
     actual_result = "Fernando Alonso"
     st.info(f"Actual 10th place driver: {actual_result}")
 
-    # Calculate points based on user's guess and display the result
+    # Calculate points based on the user's guess and display the result
     points = 10
     st.success(f"You scored {points} points for your guess!")
 
