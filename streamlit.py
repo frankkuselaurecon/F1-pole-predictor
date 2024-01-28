@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 def plot_cumulative_points():
     # Load data
     df = pd.read_excel('F1_data.xlsm', sheet_name='Results', index_col=0)
+    print(df)
     df = df.T
     cumulative_points = df.cumsum()
 
@@ -41,6 +43,8 @@ def plot_cumulative_points():
 
                 # Update the previous leader
                 prev_leader = leader
+
+    exit()
 
     # Set labels and title
     ax.set_xlabel('Race')
