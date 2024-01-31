@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import calendar
 from datetime import datetime
 import numpy as np
+import requests
 
 # ---------------------- SETTINGS ----------------------
 race_results = []
@@ -21,8 +22,45 @@ def main():
     # Page Info
     st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
     st.title(page_title + " " + page_icon)
+    st.sidebar.header("Menu")
     st.text('Welcome to the F1 Prediction Game! Predict the 10th place driver and earn points.')
     st.markdown(datetime.today().strftime("%d %b %Y"))
+
+
+    # --- Get list of drivers and their stats from the F1 data API
+    url = "http://ergast.com/api/f1/2023/last/drivers.json" # this API will be shut down end of 2024 :(
+    response = requests.get(url)
+    data = response.json()
+    
+    # Convert the data to a pandas DataFrame
+    drivers = pd.DataFrame(data["MRData"]["DriverTable"]["Drivers"])
+    drivers["name"] = drivers["givenName"] + " " + drivers["familyName"]
+    st.text(drivers["name"])
+    
+    
+    # # Check if the request was successful (status code 200)
+    # if response.status_code == 200:
+    #     # Extract JSON data from the response
+    #     data = response.json()
+
+    #     # Process the JSON data
+    #     # Here you can access and manipulate the data as needed
+    #     # For example, you can iterate over the drivers and their stats
+    #     drivers = data['MRData']['DriverTable']['Drivers']
+    #     st.text(drivers)
+    #     for driver in drivers:
+    #         driver_id = driver['driverId']
+    #         driver_name = driver['givenName'] + ' ' + driver['familyName']
+    #         # Access other driver stats as needed
+    #     st.text("successful")
+    #     st.text(driver_name)
+    # else:
+    #     # Print an error message if the request was not successful
+    #     print(f"Failed to fetch data. Status code: {response.status_code}")
+    
+    
+    
+
 
     # --- Get user's guess ---
     st.subheader(f'Select your :red[drivers]... ')
