@@ -5,7 +5,6 @@ Stats for drivers picked are revealed once the user's guess has been submitted.
 
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import calendar
 from datetime import datetime
 import numpy as np
