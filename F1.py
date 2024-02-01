@@ -106,8 +106,7 @@ def plot_cumulative_points(cumulative_points):
          if final_points >= 180:
              if cumulative_points[user].max() == cumulative_points.max().max():
                  ax.plot(cumulative_points.index, cumulative_points[user], label=user, linewidth=3, color='black')
-             else:
-                  ax.plot(cumulative_points.index, cumulative_points[user], label=user, linewidth=2)
+             else:                 ax.plot(cumulative_points.index, cumulative_points[user], label=user, linewidth=2)
           else:             
 ax.plot(cumulative_points.index, cumulative_points[user], color='grey', alpha=0.3)
 
