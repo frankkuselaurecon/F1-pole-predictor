@@ -22,3 +22,4 @@ else:
 # Display user's score and ranking on the leaderboard (to be implemented)
 print(f'User score: {points}')
 print('Hello user name! You scored %s points with %s' %(points, user_guess))
+
