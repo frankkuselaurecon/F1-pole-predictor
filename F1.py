@@ -92,7 +92,7 @@ def main():
     # --- Plot cumulative points ---
     st.header("Leaderboard")
     
-plot_cumulative_points(cumulative_points)
+    plot_cumulative_points(cumulative_points)
 
 
 # TODO: Redo this section to convert the results to a dataframe.
